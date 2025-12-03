@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // 預期 user 物件：{ uid, username, isAdmin, points, ... }
       localStorage.setItem("pogo_current_user", JSON.stringify(user));
       if (user.isAdmin) {
+        localStorage.setItem("login","admin");
         window.location.href = "admin.html";
       } else {
+        localStorage.setItem("login","user");
         window.location.href = "user.html";
       }
     } catch (e) {

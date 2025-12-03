@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+<script>
+if(localStorage.getItem("login")!="admin"){
+  location.href=new URL("login.html", location.href);
+}
+</script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -109,9 +114,9 @@
     </button>
   </div>
 
-  <script src="js/config.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/components.js"></script>
-  <script src="js/admin.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/components.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 </html>
